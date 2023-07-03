@@ -5,9 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>detram</title>
+    <style>
+        body{
+            background-color: darkgrey;
+         
+        }
+        h1{
+            text-align: center;
+            color:black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .tela{
+            background-color: black;
+            border: 4px solid blue; 
+           padding: 10px;
+            color: white;
+           font-family: 'Times New Roman', Times, serif;           
+            width: 400px;
+            height: 300px;
+            align-items: center;
+            margin: auto;
+           
+        }
+        input{
+            width: 70px;
+            margin: 15px;
+            padding: 5px;
+        }
+       
+    </style>
 </head>
 <body>
     <h1>Sistema de multas!</h1>
+    <div class="tela">
+     Velocidade do carro: <input type="number" name="txtvel" id="txtvel">KM/h
+     <input type="button" value="Verificar" onclick="calcular()">
+     <div id="res"></div>
+    </div>
+  
+
+    <script>
+        function calcular(){
+            var txtv = window.document.getElementById('txtvel')
+            var res = window.document.getElementById('res')
+            var vel = Number (txtv.value)
+            res.innerHTML = `<p>Sua velocidade atual é ${vel} KM/h</p>`
+            if(vel > 60){
+                res.innerHTML = `<p>Multado voçê ultrapassou o limite de velocidade!</p>`    
+                res.style.backgroundColor = 'red'            
+            }
+            res.innerHTML += `<p>Dirija sempre com sinto de segurança</p>`
+            
+           
+        }
+       
+    </script>
     
 </body>
 </html>
