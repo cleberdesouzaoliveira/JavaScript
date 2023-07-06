@@ -1,0 +1,31 @@
+body{
+    background-color: rgb(105, 167, 238);
+}
+header > h1{
+    font-family: 'Times New Roman', Times, serif;    
+    color: white;
+    text-align: center;
+}
+section{    
+        background-color: white;
+        width: 450px;   
+        height: 300px;     
+        text-align: center;
+        margin: auto;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 3px 3px 3px rgba(32, 31, 31, 0.356);
+}
+div > #msg{
+   padding-top: 20px;
+}
+div > #imagem{ 
+  margin-bottom: 60px;
+  padding-bottom: 30px;
+}
+
+footer{
+    color: black;
+    text-align: center;
+    font-style: italic;
+}
